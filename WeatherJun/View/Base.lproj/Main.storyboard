@@ -25,12 +25,12 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7m-dw-xjY">
-                                            <rect key="frame" x="36" y="11" width="139" height="36"/>
+                                            <rect key="frame" x="36" y="11" width="131" height="36"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="139" id="T5S-69-FKC"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="131" id="4or-la-I8t"/>
                                                 <constraint firstAttribute="height" constant="36" id="zkm-W3-G0w"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -67,6 +67,7 @@
                                         <constraint firstItem="oa3-SX-eAB" firstAttribute="top" secondItem="zOW-Wi-BGC" secondAttribute="top" constant="20" symbolic="YES" id="MkG-wl-CDa"/>
                                         <constraint firstItem="a7m-dw-xjY" firstAttribute="leading" secondItem="zOW-Wi-BGC" secondAttribute="leading" constant="36" id="YwI-l5-Uwo"/>
                                         <constraint firstItem="Sp9-dj-OL0" firstAttribute="top" secondItem="zOW-Wi-BGC" secondAttribute="top" constant="11" id="qgC-At-R0r"/>
+                                        <constraint firstItem="Sp9-dj-OL0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="a7m-dw-xjY" secondAttribute="trailing" constant="8" symbolic="YES" id="rns-Sa-22V"/>
                                         <constraint firstAttribute="trailing" secondItem="Sp9-dj-OL0" secondAttribute="trailing" constant="100" id="tYj-XL-6Pb"/>
                                         <constraint firstAttribute="trailing" secondItem="oa3-SX-eAB" secondAttribute="trailing" constant="20.5" id="yic-5G-Pyr"/>
                                     </constraints>
@@ -75,6 +76,7 @@
                                     <outlet property="conditionCityLabel" destination="Sp9-dj-OL0" id="Sp8-Hf-bdp"/>
                                     <outlet property="nameCityLabel" destination="a7m-dw-xjY" id="Za5-fw-dHW"/>
                                     <outlet property="tempCityLabel" destination="5qL-32-OrQ" id="YnE-79-AX7"/>
+                                    <segue destination="QcC-TH-x5f" kind="show" identifier="showDetail" id="vPg-N8-yhJ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -83,18 +85,15 @@
                             <outlet property="delegate" destination="B0F-t2-IGC" id="sSt-Ed-XeS"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <segue destination="QcC-TH-x5f" kind="show" id="C6x-Fc-B6d"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AtN-nH-GB6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-13.043478260869566" y="138.61607142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--DetailVC-->
         <scene sceneID="CwR-kp-xWL">
             <objects>
-                <viewController id="QcC-TH-x5f" sceneMemberID="viewController">
+                <viewController id="QcC-TH-x5f" customClass="DetailVC" customModule="WeatherJun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="66M-Yw-tmS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -102,32 +101,34 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="GTO-eh-tKr" userLabel="Top_stack">
                                 <rect key="frame" x="88" y="51" width="198" height="422"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9M-Xp-M0B">
-                                        <rect key="frame" x="33" y="0.0" width="132" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9M-Xp-M0B">
+                                        <rect key="frame" x="44" y="0.0" width="110" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TEl-FC-pAS">
-                                        <rect key="frame" x="0.0" y="70" width="198" height="212"/>
+                                        <rect key="frame" x="0.0" y="64" width="198" height="218"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ясно" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hci-tP-ll1">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ясно" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hci-tP-ll1">
                                         <rect key="frame" x="65" y="316" width="68.5" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="88°С" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3i-fk-WhQ">
-                                        <rect key="frame" x="63.5" y="386" width="71" height="36"/>
+                                        <rect key="frame" x="64" y="386" width="70.5" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Z3i-fk-WhQ" firstAttribute="leading" secondItem="GTO-eh-tKr" secondAttribute="leading" constant="63.5" id="8BX-Wx-BvC"/>
                                     <constraint firstItem="TEl-FC-pAS" firstAttribute="leading" secondItem="GTO-eh-tKr" secondAttribute="leadingMargin" id="8Up-Te-emm"/>
+                                    <constraint firstAttribute="trailing" secondItem="TEl-FC-pAS" secondAttribute="trailing" id="Bbk-Xt-988"/>
+                                    <constraint firstAttribute="bottom" secondItem="TEl-FC-pAS" secondAttribute="bottom" constant="140" id="ZiG-rc-DcD"/>
+                                    <constraint firstItem="TEl-FC-pAS" firstAttribute="leading" secondItem="GTO-eh-tKr" secondAttribute="leading" id="wTO-XK-hFc"/>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="106" translatesAutoresizingMaskIntoConstraints="NO" id="wq9-8Y-3r1" userLabel="Bottom_stack">
@@ -245,6 +246,7 @@
                             <constraint firstItem="wq9-8Y-3r1" firstAttribute="top" secondItem="GTO-eh-tKr" secondAttribute="bottom" constant="51" id="3X1-8Z-YH7"/>
                             <constraint firstItem="ZCz-zc-dyx" firstAttribute="trailing" secondItem="GTO-eh-tKr" secondAttribute="trailing" constant="128" id="ATs-JJ-aqb"/>
                             <constraint firstItem="GTO-eh-tKr" firstAttribute="top" secondItem="ZCz-zc-dyx" secondAttribute="top" constant="51" id="JZ6-R7-NGa"/>
+                            <constraint firstItem="TEl-FC-pAS" firstAttribute="leading" secondItem="ZCz-zc-dyx" secondAttribute="leading" constant="88" id="NmB-Zl-9J8"/>
                             <constraint firstItem="ZCz-zc-dyx" firstAttribute="trailing" secondItem="wq9-8Y-3r1" secondAttribute="trailing" constant="36" id="mhw-VT-Zty"/>
                             <constraint firstItem="wq9-8Y-3r1" firstAttribute="leading" secondItem="ZCz-zc-dyx" secondAttribute="leading" constant="36" id="vC2-FH-sfk"/>
                             <constraint firstItem="wq9-8Y-3r1" firstAttribute="centerX" secondItem="ZCz-zc-dyx" secondAttribute="centerX" id="vEa-Mt-P1t"/>
@@ -252,6 +254,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="n8b-Un-9ux"/>
+                    <connections>
+                        <outlet property="conditionLabel" destination="hci-tP-ll1" id="ybc-mU-x3T"/>
+                        <outlet property="maxTempLabel" destination="OaW-HH-eBF" id="VpK-qa-nIT"/>
+                        <outlet property="minTempLabel" destination="JZ7-0Q-zdk" id="ugG-Nd-BVv"/>
+                        <outlet property="nameCityLabel" destination="n9M-Xp-M0B" id="slv-Va-kjH"/>
+                        <outlet property="pressureLabel" destination="qDk-eb-fuB" id="Oyt-kU-9aw"/>
+                        <outlet property="tempCity" destination="Z3i-fk-WhQ" id="AMv-C9-GBr"/>
+                        <outlet property="viewCity" destination="TEl-FC-pAS" id="XXj-43-iyM"/>
+                        <outlet property="windSpeedLabel" destination="4dI-Vw-RFK" id="70L-oo-obm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ij9-Co-6HD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

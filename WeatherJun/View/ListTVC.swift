@@ -54,5 +54,17 @@ class ListTVC: UITableViewController {
         
         return cell
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetail" {
+            guard let indexPath = tableView.indexPathForSelectedRow else { return }
+            
+            let cityWeather = citiesArray[indexPath.row]
+            let dstVC = segue.destination as! DetailVC
+            dstVC.weatherModel = cityWeather
+            
+        }
+    }
 
 }
