@@ -21,6 +21,7 @@
 		C4B4D56728A2CE2800E26B75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4B4D56528A2CE2800E26B75 /* LaunchScreen.storyboard */; };
 		C4B4D56F28A2CEA200E26B75 /* ListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B4D56E28A2CEA200E26B75 /* ListTVC.swift */; };
 		C4ECF9AA28B3D88200ED09C0 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ECF9A928B3D88200ED09C0 /* DetailVC.swift */; };
+		C4F91A5128B68B5D00FD1F7F /* addCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F91A5028B68B5D00FD1F7F /* addCity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		C4B4D56E28A2CEA200E26B75 /* ListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTVC.swift; sourceTree = "<group>"; };
 		C4D009B12E1F55185BEADF07 /* Pods-WeatherJun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherJun.debug.xcconfig"; path = "Target Support Files/Pods-WeatherJun/Pods-WeatherJun.debug.xcconfig"; sourceTree = "<group>"; };
 		C4ECF9A928B3D88200ED09C0 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		C4F91A5028B68B5D00FD1F7F /* addCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addCity.swift; sourceTree = "<group>"; };
 		FD65C97F2BC9E4A678706CBA /* Pods_WeatherJun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherJun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -100,6 +102,7 @@
 			children = (
 				C43DD99328A5740100CBC226 /* NetworkWeatherManager.swift */,
 				C4A7E6AF28AEB1B2006510EC /* ListCell.swift */,
+				C4F91A5028B68B5D00FD1F7F /* addCity.swift */,
 				C43DD99528A5765D00CBC226 /* WeatherData.swift */,
 				C43DD99728A57FE100CBC226 /* Weather.swift */,
 			);
@@ -141,7 +144,6 @@
 				C4D009B12E1F55185BEADF07 /* Pods-WeatherJun.debug.xcconfig */,
 				4261E4B9B18B94DFADC80201 /* Pods-WeatherJun.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -261,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4B4D56F28A2CEA200E26B75 /* ListTVC.swift in Sources */,
+				C4F91A5128B68B5D00FD1F7F /* addCity.swift in Sources */,
 				C4B4D55B28A2CE2700E26B75 /* AppDelegate.swift in Sources */,
 				C471142528AEA01800E61002 /* GetCitiesWeather.swift in Sources */,
 				C43DD99428A5740100CBC226 /* NetworkWeatherManager.swift in Sources */,

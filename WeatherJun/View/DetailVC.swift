@@ -43,7 +43,7 @@ class DetailVC: UIViewController {
         self.viewCity.addSubview(weatherImage)
         
         conditionLabel.text = weatherModel?.conditionString
-        tempCity.text = "\((weatherModel?.temperature)!)"
+        tempCity.text = weatherModel?.temperatureString
         pressureLabel.text = "\((weatherModel?.pressureMm)!)"
         windSpeedLabel.text = "\((weatherModel?.windSpeed)!)"
         minTempLabel.text = "\((weatherModel?.tempMin)!)"
